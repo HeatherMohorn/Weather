@@ -27,3 +27,10 @@ const server = app.listen(port, listening);
 function listening(){
   console.log("server running on localhost: " + port);
 };
+
+app.get('/', getFunction);
+
+function getFunction(request, response){
+  response.send(projectData);
+  console.log("success");
+};
