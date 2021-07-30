@@ -28,9 +28,8 @@ function listening(){
   console.log("server running on localhost: " + port);
 };
 
-app.get('/', getFunction);
+app.get('/all', getData);
 
-function getFunction(request, response){
+function getData(request, response) {
   response.send(projectData);
-  console.log("success");
-};
+}
