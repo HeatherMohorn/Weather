@@ -33,3 +33,10 @@ app.get('/all', getData);
 function getData(request, response) {
   response.send(projectData);
 }
+
+//app.post('/add', postFunc);
+
+//function postFunc(request, response){
+//  projectData.add(request.body);
+//  console.log(projectData);
+//}
