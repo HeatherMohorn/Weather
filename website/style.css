@@ -17,6 +17,8 @@ body{
 }
 
 .holder{
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -41,7 +43,7 @@ body{
 }
 
 .headline {
-
+  font-size: 60;
 }
 .title{
 
