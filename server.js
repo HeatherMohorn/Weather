@@ -48,5 +48,5 @@ function addData(request, response){
   }
   projectData.push(newEntry);
   response.send(projectData);
-  console.log(projectData);
+  //console.log(projectData);
 }

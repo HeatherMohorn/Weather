@@ -5,14 +5,16 @@ var index = 0;
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth() + 1 +'.'+ d.getDate()+'.'+ d.getFullYear();
 
 
 //add event listener for button
 document.getElementById('generate').addEventListener('click', performAction);
 
 //do this when clicked
+
 function performAction(e){
+
   const zip =  document.getElementById('zip').value;
   const feeling = document.getElementById('feelings').value;
   getWeather(baseURL,zip,key)
@@ -20,7 +22,9 @@ function performAction(e){
     //console.log(data);
     postData('/addData', {temp: data.main.temp, feeling: feeling, date: newDate});
   })
-  .then(updateUI())
+  .then(()=>{
+    updateUI()
+})
 
 };
 
@@ -81,3 +85,20 @@ const getData = async (url = '') =>{
     console.log("error", error);
   }
 };
+/*
+function isValidZip(entry){
+  return /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(entry);
+  }
+};
+
+/* var valid = false;
+while valid == false{
+  const zip =  document.getElementById('zip').value;
+  if (isValidZip(zip) == false){
+    alert("Enter valid zip.");
+  }
+  else{
+    valid = true;
+  }
+}
+*/
