@@ -14,7 +14,6 @@ document.getElementById('generate').addEventListener('click', performAction);
 //do this when clicked
 
 function performAction(e){
-
   const zip =  document.getElementById('zip').value;
   const feeling = document.getElementById('feelings').value;
   getWeather(baseURL,zip,key)
@@ -24,8 +23,7 @@ function performAction(e){
   })
   .then(()=>{
     updateUI()
-})
-
+  })
 };
 
 //get temperature data from API
@@ -85,20 +83,3 @@ const getData = async (url = '') =>{
     console.log("error", error);
   }
 };
-/*
-function isValidZip(entry){
-  return /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(entry);
-  }
-};
-
-/* var valid = false;
-while valid == false{
-  const zip =  document.getElementById('zip').value;
-  if (isValidZip(zip) == false){
-    alert("Enter valid zip.");
-  }
-  else{
-    valid = true;
-  }
-}
-*/
