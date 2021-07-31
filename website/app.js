@@ -66,9 +66,9 @@ const updateUI = async () => {
     try{
       const allData = await request.json();
 
-      document.getElementById('date').innerHTML = allData[index].date;
-      document.getElementById('temp').innerHTML = allData[index].temp;
-      document.getElementById('content').innerHTML = allData[index].feeling;
+      document.getElementById('date').innerHTML = allData.date;
+      document.getElementById('temp').innerHTML = allData.temp;
+      document.getElementById('content').innerHTML = allData.feeling;
       console.log(allData);
       index ++;
   }catch(error){
